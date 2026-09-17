@@ -1,0 +1,294 @@
+/* =========================
+   Global
+   ========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+/* =========================
+   Button (shared language from landing page .btn)
+   ========================= */
+
+button[type="submit"],
+.task-form button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #F5C400;
+    color: #111111;
+    text-decoration: none;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover,
+.task-form button:hover {
+    background-color: #FFD21F;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(245, 196, 0, 0.25);
+}
+
+/* =========================
+   Auth screens (Login/Signup) — same card language as .feature
+   ========================= */
+
+.login-container,
+.signup-container {
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 40px 35px;
+    background-color: #222222;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.signup-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.signup-header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #F5C400;
+    letter-spacing: -0.5px;
+}
+
+.signup-header p {
+    color: #B3B3B3;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #CCCCCC;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    color: #FFFFFF;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #F5C400;
+}
+
+.error-message {
+    display: block;
+    min-height: 16px;
+    font-size: 13px;
+    color: #FF6B6B;
+    margin-top: 6px;
+}
+
+.status-message {
+    text-align: center;
+    color: #F5C400;
+    font-size: 14px;
+    min-height: 18px;
+    margin-top: 14px;
+}
+
+.signup-link,
+.login-link {
+    text-align: center;
+    color: #B3B3B3;
+    font-size: 14px;
+    margin-top: 24px;
+}
+
+.signup-link button,
+.login-link button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #F5C400;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.signup-link button:hover,
+.login-link button:hover {
+    color: #FFD21F;
+}
+
+/* =========================
+   Dashboard
+   ========================= */
+
+.dashboard-container {
+    max-width: 620px;
+    margin: 60px auto;
+    padding: 0 24px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+.dashboard-header button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    background: none;
+    border: 1px solid #333333;
+    padding: 8px 18px;
+    border-radius: 6px;
+    color: #B3B3B3;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-header button:hover {
+    border-color: #F5C400;
+    color: #F5C400;
+}
+
+.task-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.task-form input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    background-color: #222222;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.task-form input:focus {
+    outline: none;
+    border-color: #F5C400;
+}
+
+.task-form button {
+    width: auto;
+    padding: 12px 22px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    margin-bottom: 10px;
+    background-color: #222222;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-item:hover {
+    border-color: #F5C400;
+    transform: translateY(-2px);
+}
+
+.task-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #F5C400;
+    cursor: pointer;
+}
+
+.task-item span {
+    flex: 1;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.task-done {
+    color: #666666;
+    text-decoration: line-through;
+}
+
+.task-item button {
+    background: none;
+    border: none;
+    color: #888888;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.task-item button:hover {
+    color: #FF6B6B;
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .login-container,
+    .signup-container {
+        margin: 40px 20px;
+        padding: 30px 24px;
+    }
+
+    .dashboard-container {
+        padding: 0 16px;
+    }
+
+    .task-form {
+        flex-direction: column;
+    }
+
+}
